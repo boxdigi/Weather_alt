@@ -140,15 +140,8 @@ function showCurrTemp(response) {
     currentWind.innerHTML = `wind ${Math.round(response.data.wind.speed)} m/s`;
 
     getForecast(response.data.coord);
-    //cityRemove();
 }
 
-//function cityRemove() {
-//    let cityElement = document.querySelector("#city-input");
-//    if (cityElement.value != null) {
-//        cityElement.value = null
-//    };
-//}
 
 function getForecast(coordinates) {
     let apiUrlF = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`
@@ -291,7 +284,6 @@ function classListFarenheihActive() {
 let listCities = document.querySelectorAll('li');
 listCities.forEach(function (listCity) {
     listCity.addEventListener("click", (event) => {
-        //cityRemove();
         let displayCity = event.target.textContent;
         classListCelsiusActive();
         axios.get(`${apiUrl}q=${displayCity}&appid=${apiKey}&units=metric`).then(showCurrTemp);
