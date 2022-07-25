@@ -89,6 +89,7 @@ let currentLocation = document.querySelector("#btn-current");
 currentLocation.addEventListener("click", handlePosition);
 
 function showCurrTemp(response) {
+    console.log(response.data);
     classListCelsiusActive();
     let tempCur = document.querySelector("#current-temp");
     tempCur.innerHTML = `🌡️ ${Math.round(response.data.main.temp)} °C<br /><span class="realFeel">feels like ${Math.round(response.data.main.feels_like)}`;
@@ -99,9 +100,11 @@ function showCurrTemp(response) {
     let country = document.querySelector("#current-country");
     country.innerHTML = response.data.sys.country;
 
-    let currCondition = document.querySelector("#current-condition");
+    let currCondition = document.querySelector("#current-icon");
     let iconCurr = response.data.weather[0].icon;
-    currCondition.innerHTML = iconCurr;
+    let currdescription = document.querySelector("#current-description")
+    currdescription.innerHTML = (response.data.weather[0].main).toLowerCase();
+
     if (iconCurr === "01d") {
         currCondition.innerHTML = iconCurr.replace("01d", "☀️")
     };
@@ -132,6 +135,7 @@ function showCurrTemp(response) {
     if (iconCurr === "50d") {
         currCondition.innerHTML = iconCurr.replace("50d", "🌫️");
     }
+
 
     let currentHumid = document.querySelector("#cur-humid");
     currentHumid.innerHTML = `humidity ${response.data.main.humidity}%`
