@@ -38,7 +38,7 @@ day = days[now.getDay()];
 month = months[now.getMonth()];
 
 let currentData = document.querySelector("#current-data");
-currentData.innerHTML = `<span class="updated">Last updated:</span><br />${date}.${month}.${year}`;
+currentData.innerHTML = `<span class="updated">Updated:</span><br />${date}.${month}.${year}`;
 
 let currentTime = document.querySelector("#current-day-time");
 currentTime.innerHTML = `${day}   ${hour}:${minute}`;
@@ -92,7 +92,7 @@ function showCurrTemp(response) {
     console.log(response.data);
     classListCelsiusActive();
     let tempCur = document.querySelector("#current-temp");
-    tempCur.innerHTML = `🌡️ ${Math.round(response.data.main.temp)} °C<br /><span class="realFeel">feels like ${Math.round(response.data.main.feels_like)}`;
+    tempCur.innerHTML = `🌡️ ${Math.round(response.data.main.temp)} °C<br /><span class="realFeel">feels like ${Math.round(response.data.main.feels_like)}°`;
 
     let currentCity = document.querySelector("#current-city");
     currentCity.innerHTML = response.data.name;

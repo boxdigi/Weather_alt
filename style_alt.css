@@ -75,23 +75,28 @@ li:hover {
     font-family: "Baloo Bhaijaan 2", cursive;
 }
 
+#current-data {
+    line-height: 2.5;
+    vertical-align: bottom;
+}
+
 #current-data,
 #current-day-time {
     font-size: 14px;
     font-family: "Libre Franklin", sans-serif;
+
 }
 
 #current-data .updated {
     font-style: italic;
     font-size: 13px;
-    line-height: 2.5;
     color: rgb(43, 67, 83, 0.6);
     font-weight: 300;
 }
 
 [id|=cur] {
     color: rgba(48, 41, 41, 0.8);
-    font-size: 14px;
+    font-size: smaller;
     font-family: "Libre Franklin", sans-serif;
     padding: 2px;
 }
