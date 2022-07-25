@@ -138,10 +138,10 @@ function showCurrTemp(response) {
 
 
     let currentHumid = document.querySelector("#cur-humid");
-    currentHumid.innerHTML = `humidity ${response.data.main.humidity}%`
+    currentHumid.innerHTML = `humidity<br /> ${response.data.main.humidity}%`
 
     let currentWind = document.querySelector("#cur-wind");
-    currentWind.innerHTML = `wind ${Math.round(response.data.wind.speed)} m/s`;
+    currentWind.innerHTML = `wind<br />${Math.round(response.data.wind.speed)} m/s`;
 
     getForecast(response.data.coord);
 }
@@ -209,12 +209,12 @@ function showForecastTemp(response) {
                 iconEmoji = icon.replace("50d", "🌫️");
             }
             forecastHTML = forecastHTML +
-                `   <div class="col-4 ms-2 text-start text-nowrap">
+                `   <div class="col-5 ms-2 text-start text-nowrap">
                 <span class="weather-forecast-date">${formatData(forecastDay.dt)}  </span>
                 <span class="fst-italic text-primary">${formatDay(forecastDay.dt)}</span>
             </div>
-          <div class="col fs-6 text-center align-items-center">${iconEmoji}</div>
-            <div class="col-4 text-center text-nowrap">
+          <div class="col-3 fs-6 text-center me-0">${iconEmoji}</div>
+            <div class="col-3 me-2 text-center text-nowrap">
                 <span class="weather-temperature-forecast-min">${Math.round(forecastDay.temp.min)}°</span> | 
                 <strong><span class="weather-temperature-forecast-max">${Math.round(forecastDay.temp.max)}°</span></strong>
             </div>          

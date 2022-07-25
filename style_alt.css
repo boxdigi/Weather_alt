@@ -75,16 +75,11 @@ li:hover {
     font-family: "Baloo Bhaijaan 2", cursive;
 }
 
-#current-data {
-    line-height: 2.5;
-    vertical-align: bottom;
-}
-
 #current-data,
 #current-day-time {
     font-size: 14px;
     font-family: "Libre Franklin", sans-serif;
-
+    vertical-align: bottom;
 }
 
 #current-data .updated {
@@ -92,18 +87,19 @@ li:hover {
     font-size: 13px;
     color: rgb(43, 67, 83, 0.6);
     font-weight: 300;
+    vertical-align: bottom;
 }
 
 [id|=cur] {
     color: rgba(48, 41, 41, 0.8);
-    font-size: smaller;
     font-family: "Libre Franklin", sans-serif;
-    padding: 2px;
 }
 
 #current-temp,
 #current-icon {
     font-size: larger;
+    font-weight: bolder;
+    vertical-align: bottom;
 }
 
 #current-temp .realFeel,
@@ -114,6 +110,7 @@ li:hover {
     font-family: "Libre Franklin", sans-serif;
     font-weight: 400;
     font-style: italic;
+    vertical-align: bottom;
 }
 
 .fst-italic {
