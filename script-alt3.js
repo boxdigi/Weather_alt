@@ -54,7 +54,7 @@ function inputCity(event) {
     if (city.value) {
         axios.get(`${apiUrl}q=${city.value}&appid=${apiKey}&units=metric`).then(showCurrTemp,
             function () {
-                alert('Requested city is not found in our list. Please try again 😉 or ask Google');
+                alert('The city is not found in our list. Please verify it and try again 😉 or ask Google');
             }
         );
     } else {
