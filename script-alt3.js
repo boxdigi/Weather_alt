@@ -41,7 +41,7 @@ let currentData = document.querySelector("#current-data");
 currentData.innerHTML = `<span class="updated">Updated:</span><br />${date}.${month}.${year}`;
 
 let currentTime = document.querySelector("#current-day-time");
-currentTime.innerHTML = `${day}   ${hour}:${minute}`;
+currentTime.innerHTML = `${day}<br />${hour}:${minute}`;
 
 let cityDefault = "Kyiv";
 let apiKey = "481bc9bf97ae403a7ee70a4848c33bb8";
