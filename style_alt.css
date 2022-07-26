@@ -149,6 +149,16 @@ p {
     color: blueviolet;
 }
 
+.github {
+    text-decoration: none;
+}
+
+.github:hover {
+    text-decoration: underline;
+    color: green;
+    cursor: pointer;
+}
+
 .coder {
     text-decoration: none;
 }
