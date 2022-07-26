@@ -114,28 +114,51 @@ function showCurrTemp(response) {
     if (iconCurr === "02d") {
         currCondition.innerHTML = iconCurr.replace("02d", "⛅")
     };
+    if (iconCurr === "02n") {
+        currCondition.innerHTML = iconCurr.replace("02n", "⛅")
+    };
     if (iconCurr === "03d") {
         currCondition.innerHTML = iconCurr.replace("03d", "☁️")
+    };
+    if (iconCurr === "03n") {
+        currCondition.innerHTML = iconCurr.replace("03n", "☁️")
     };
     if (iconCurr === "04d") {
         currCondition.innerHTML = iconCurr.replace("04d", "☁️☁️")
     };
+    if (iconCurr === "04n") {
+        currCondition.innerHTML = iconCurr.replace("04n", "☁️☁️")
+    };
     if (iconCurr === "09d") {
+        currCondition.innerHTML = iconCurr.replace("09d", "🌧️");
+    }
+    if (iconCurr === "09n") {
         currCondition.innerHTML = iconCurr.replace("09n", "🌧️");
     }
     if (iconCurr === "10d") {
         currCondition.innerHTML = iconCurr.replace("10d", "🌦️");
     }
+    if (iconCurr === "10n") {
+        currCondition.innerHTML = iconCurr.replace("10n", "🌦️");
+    }
     if (iconCurr === "11d") {
         currCondition.innerHTML = iconCurr.replace("11d", "⛈️");
+    }
+    if (iconCurr === "11n") {
+        currCondition.innerHTML = iconCurr.replace("11n", "⛈️");
     }
     if (iconCurr === "13d") {
         currCondition.innerHTML = iconCurr.replace("13d", "❄️");
     }
+    if (iconCurr === "13n") {
+        currCondition.innerHTML = iconCurr.replace("13n", "❄️");
+    }
     if (iconCurr === "50d") {
         currCondition.innerHTML = iconCurr.replace("50d", "🌫️");
     }
-
+    if (iconCurr === "50n") {
+        currCondition.innerHTML = iconCurr.replace("50n", "🌫️");
+    }
 
     let currentHumid = document.querySelector("#cur-humid");
     currentHumid.innerHTML = `humidity<br /> ${response.data.main.humidity}%`
