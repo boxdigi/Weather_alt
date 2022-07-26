@@ -109,7 +109,7 @@ function showCurrTemp(response) {
         currCondition.innerHTML = iconCurr.replace("01d", "☀️")
     };
     if (iconCurr === "01n") {
-        currCondition.innerHTML = iconCurr.replace("01d", "🌒")
+        currCondition.innerHTML = iconCurr.replace("01n", "🌒")
     };
     if (iconCurr === "02d") {
         currCondition.innerHTML = iconCurr.replace("02d", "⛅")
